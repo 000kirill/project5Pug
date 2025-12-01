@@ -1,0 +1,43 @@
+mixin select-item(item)
+  div.header_select-item
+    span.header_select-item-text=item
+mixin custom-select(name)
+  div.header_select
+    div.header_select-header
+      span.header_select-current=name
+      div.header_select-icon
+        img.header_select-icon-img(src="../img/svg/Select-icon.svg" alt="")
+    div.header_select-body
+      +select-item("Post Header")
+      +select-item("Post Layout")
+      +select-item("Share Button")
+      +select-item("Gallery Post")
+      +select-item("Video Post")
+header.header 
+  .header_mobile
+    .header_mobile-top
+      img.header_logo(src="../img/svg/Logotype.svg" alt="")
+      .header_close-btn
+        span.header_mobile-cross
+    .header_bottom_mobile
+      +custom-select("Demos")
+      +custom-select("Post")
+      +custom-select("Features")
+      +custom-select("Categories")
+      +custom-select("Shops")
+      a.header_link(href="") Buy Now
+  div.header_top
+    div.header_burger
+      span.header_burger-menu
+    img.header_logo(src="../img/svg/Logotype.svg" alt="")
+    div.header_top_right
+      input.header_text-field(type="text" placeholder="Поиск") 
+      button.header_search
+  div.header_bottom
+    +custom-select("Demos")
+    +custom-select("Post")
+    +custom-select("Features")
+    +custom-select("Categories")
+    +custom-select("Shops")
+    a.header_link(href="") Buy Now 
+

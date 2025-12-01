@@ -1,0 +1,22 @@
+mixin topic-card(type, topic, image)
+  .main_card
+    .main_card-img
+      img.main_card-picture(src=image, alt="Изображения")
+    .main_card-type=type 
+    .main_card-topic=topic
+    .main_card-user 
+      span.main_card-author Nieck Bove
+      span.main_card-date  April 8, 2018
+      span.main_card-views 3K Views
+    .main_card-description Explore key concepts, practical tips, and insights across various subjects to boost your journey.
+main 
+  .main 
+    +topic-card("Coolness", "Tought Guy", "../img/png/1.png")
+    +topic-card("Lifestyle", "Look - perfect balance", "../img/png/2.png")
+    +topic-card("Style", "Things to Do in Rome", "../img/png/3.png")
+    +topic-card("Drinks", "How to drink beautifully", "../img/png/4.png")
+    +topic-card("Relax", "Visiting the festival with friends", "../img/png/5.png")
+    +topic-card("night", "A very romantic time", "../img/png/6.png")
+    +topic-card("Coworking", "Cofee, Laptop, Colleagues", "../img/png/7.png")
+    +topic-card("Sea", "Amazing sunrise", "../img/png/8.png")
+    +topic-card("Night Club", "So funny", "../img/png/9.png")
